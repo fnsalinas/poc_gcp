@@ -1,0 +1,81 @@
+{
+    "table_id": "1002",
+    "table_name_source": "productos",
+    "table_schema_source": "onpremise",
+    "table_name_target": "productos_DIRECTO_BQ",
+    "table_schema_target": "poc_gcp",
+    "periodicidad_de_carga": "diaria",
+    "hora_de_carga_local": "00:00:00",
+    "esquema_de_tabla": [
+        {
+            "column_name": "product_id",
+            "data_type": "STRING",
+            "is_nullable": "NO"
+        },
+        {
+            "column_name": "category_name",
+            "data_type": "STRING",
+            "is_nullable": "NO"
+        },
+        {
+            "column_name": "product_name",
+            "data_type": "STRING",
+            "is_nullable": "NO"
+        },
+        {
+            "column_name": "product_description",
+            "data_type": "STRING",
+            "is_nullable": "NO"
+        },
+        {
+            "column_name": "product_price",
+            "data_type": "INTEGER",
+            "is_nullable": "NO"
+        },
+        {
+            "column_name": "product_category",
+            "data_type": "STRING",
+            "is_nullable": "NO"
+        },
+        {
+            "column_name": "product_stock",
+            "data_type": "INTEGER",
+            "is_nullable": "NO"
+        },
+        {
+            "column_name": "product_rating",
+            "data_type": "INTEGER",
+            "is_nullable": "NO"
+        },
+        {
+            "column_name": "product_rating_count",
+            "data_type": "INTEGER",
+            "is_nullable": "NO"
+        },
+        {
+            "column_name": "product_reviews_count",
+            "data_type": "INTEGER",
+            "is_nullable": "NO"
+        },
+        {
+            "column_name": "product_reviews",
+            "data_type": "INTEGER",
+            "is_nullable": "NO"
+        },
+        {
+            "column_name": "product_tags",
+            "data_type": "INTEGER",
+            "is_nullable": "NO"
+        },
+        {
+            "column_name": "product_created_at",
+            "data_type": "DATETIME",
+            "is_nullable": "NO"
+        },
+        {
+            "column_name": "product_updated_at",
+            "data_type": "DATETIME",
+            "is_nullable": "NO"
+        }
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "table_id": "1001",
+    "table_name_source": "categorias",
+    "table_schema_source": "onpremise",
+    "table_name_target": "CATEGORIAS_DIRECTO_BQ",
+    "table_schema_target": "poc_gcp",
+    "periodicidad_de_carga": "semanal",
+    "hora_de_carga_local": "00:00:00",
+    "esquema_de_tabla": [
+        {
+            "column_name": "category_id",
+            "data_type": "STRING",
+            "is_nullable": "NO"
+        },
+        {
+            "column_name": "category_name",
+            "data_type": "STRING",
+            "is_nullable": "NO"
+        },
+        {
+            "column_name": "category_description",
+            "data_type": "STRING",
+            "is_nullable": "NO"
+        },
+        {
+            "column_name": "category_image_url",
+            "data_type": "STRING",
+            "is_nullable": "NO"
+        },
+        {
+            "column_name": "category_created_at",
+            "data_type": "DATETIME",
+            "is_nullable": "NO"
+        },
+        {
+            "column_name": "category_updated_at",
+            "data_type": "DATETIME",
+            "is_nullable": "NO"
+        }
+    ]
+}
