@@ -11,7 +11,7 @@ from src.common.common import (
 )
 
 
-def extract_postgres(process_id: int, bucket_name: str, folderpath: str) -> str:
+def extract_postgres(process_id: int, bucket_name: str, folderpath: str, vars: Dict[str, Any] = {}) -> str:
     """
     Extract data from PostgreSQL database.
     """
@@ -20,7 +20,7 @@ def extract_postgres(process_id: int, bucket_name: str, folderpath: str) -> str:
         process_id=1000,
         bucket_name=bucket_name,
         folderpath=folderpath
-        )
+    )
 
     source_type: str = process_config_data.get("source").get("type")
     if source_type.lower().strip() != "postgresql":
@@ -43,8 +43,10 @@ def extract_postgres(process_id: int, bucket_name: str, folderpath: str) -> str:
     source_table: str = source_config_data.get("table")
     filepath: str = f"{TMP_DATA_FOLDER}/{source_database}_{source_schema}_{source_table}_{process_id}.csv"
 
-    sql: str = get_source_sql_reader(
-        bucket_fullpath=source_config_data.get("extraction_sql_filepath"))
+    extraction_sql_filepath: str = source_config_data.get(
+        "extraction_sql_filepath")
+    sql: str = get_source_sql_reader(bucket_fullpath=extraction_sql_filepath)
+    sql: str = sql.format(**vars)
 
     conn = psycopg2.connect(**db_config_data)
     cur = conn.cursor()
