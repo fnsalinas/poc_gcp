@@ -1,0 +1,64 @@
+
+import csv
+import os
+from typing import Dict, List, Tuple, Any
+import psycopg2
+import json
+
+from src.common.common import (
+    get_config_reader,
+    get_source_sql_reader
+)
+
+
+def extract_postgres(process_id: int, bucket_name: str, folderpath: str) -> str:
+    """
+    Extract data from PostgreSQL database.
+    """
+
+    process_config_data: Dict[str, Any] = get_config_reader(
+        process_id=1000,
+        bucket_name=bucket_name,
+        folderpath=folderpath
+        )
+
+    source_type: str = process_config_data.get("source").get("type")
+    if source_type.lower().strip() != "postgresql":
+        raise Exception(
+            f"Trying to extract data from PostgreSQL database but the source type is not PostgreSQL, is {source_type}.")
+    else:
+        source_config_data: Dict[str, Any] = process_config_data.get("source")
+
+    db_config_data: Dict[str, Any] = dict(
+        host=source_config_data.get("ip_dns"),
+        port=source_config_data.get("port"),
+        dbname=source_config_data.get("database"),
+        user=source_config_data.get("user"),
+        password=source_config_data.get("secret_tag")
+    )
+
+    TMP_DATA_FOLDER: str = os.environ.get("TMP_DATA_FOLDER")
+    source_database: str = source_config_data.get("database")
+    source_schema: str = source_config_data.get("schema")
+    source_table: str = source_config_data.get("table")
+    filepath: str = f"{TMP_DATA_FOLDER}/{source_database}_{source_schema}_{source_table}_{process_id}.csv"
+
+    sql: str = get_source_sql_reader(
+        bucket_fullpath=source_config_data.get("extraction_sql_filepath"))
+
+    conn = psycopg2.connect(**db_config_data)
+    cur = conn.cursor()
+    with open(filepath, 'w', newline='') as output_file:
+        cur.execute(sql)
+        writer = csv.writer(
+            output_file,
+            delimiter='~',
+            quotechar='"',
+            doublequote=True
+        )
+        writer.writerow([i[0] for i in cur.description])
+        writer.writerows(cur.fetchall())
+        cur.close()
+        conn.close()
+
+    return filepath

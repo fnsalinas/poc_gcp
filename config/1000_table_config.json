@@ -1,0 +1,142 @@
+{
+    "user_name": "fabio.salinas",
+    "process_id": 1000,
+    "source_type": "Tabla",
+    "execution_frequency": {
+        "frequency_cron": "0 3 * * *",
+        "start_date": "2023-03-26",
+        "end_date": "2032-12-31",
+        "start_time": "17:47:00",
+        "end_time": "17:47:00",
+        "timezone": "America/Bogota",
+        "recurrent_start_date": "@2_DAYS_BEFORE_END_DATE",
+        "recurrent_end_date": "@TODAY_DATE"
+    },
+    "source": {
+        "type": "POSTGRESQL",
+        "ip_dns": "localhost",
+        "port": 5432,
+        "user": "fabio",
+        "secret_tag": "fabio",
+        "database": "gcp_poc",
+        "schema": "onpremise",
+        "table": "categorias",
+        "protocol": "ODBC",
+        "source_folderpath": "NA",
+        "source_filename": "NA",
+        "target_bucket": "poc-gcp-20230323/uploaded_data/20230323/",
+        "target_filename": "categorias_yyyymmdd.csv",
+        "file_type": "CSV",
+        "file_delimiter": "~",
+        "file_encoding": "utf-8",
+        "file_has_header": true,
+        "file_skip_leading_rows": 0,
+        "file_skip_trailing_rows": 0,
+        "extraction_sql_filepath": "gs://poc-gcp-config-20230323/sql/1000_categories.sql",
+        "extraction_mode": "replace",
+        "delta_column": "",
+        "delta_column_type": "integer",
+        "delta_column_format": "",
+        "delta_column_rule": "max",
+        "table_schema": [
+            {
+                "nombre_campo": "process_id",
+                "tipo_dato": "INTEGER",
+                "admite_nulos": "NO"
+            },
+            {
+                "nombre_campo": "process_dt",
+                "tipo_dato": "timestamp",
+                "admite_nulos": "NO"
+            },
+            {
+                "nombre_campo": "id_dia",
+                "tipo_dato": "date",
+                "admite_nulos": "NO"
+            },
+            {
+                "nombre_campo": "category_id",
+                "tipo_dato": "STRING",
+                "admite_nulos": "NO"
+            },
+            {
+                "nombre_campo": "category_name",
+                "tipo_dato": "STRING",
+                "admite_nulos": "SI"
+            },
+            {
+                "nombre_campo": "category_description",
+                "tipo_dato": "STRING",
+                "admite_nulos": "SI"
+            },
+            {
+                "nombre_campo": "category_image_url",
+                "tipo_dato": "STRING",
+                "admite_nulos": "SI"
+            },
+            {
+                "nombre_campo": "category_created_at",
+                "tipo_dato": "DATETIME",
+                "admite_nulos": "SI"
+            },
+            {
+                "nombre_campo": "category_updated_at",
+                "tipo_dato": "DATETIME",
+                "admite_nulos": "SI"
+            }
+        ]
+    },
+    "target": {
+        "type": "BigQuery",
+        "project_id": "poc-gcp-381517",
+        "dataset_id": "poc_gcp",
+        "table_id": "CATEGORIAS",
+        "table_schema": [
+            {
+                "nombre_campo": "process_id",
+                "tipo_dato": "INTEGER",
+                "admite_nulos": "NO"
+            },
+            {
+                "nombre_campo": "process_dt",
+                "tipo_dato": "timestamp",
+                "admite_nulos": "NO"
+            },
+            {
+                "nombre_campo": "id_dia",
+                "tipo_dato": "date",
+                "admite_nulos": "NO"
+            },
+            {
+                "nombre_campo": "category_id",
+                "tipo_dato": "STRING",
+                "admite_nulos": "NO"
+            },
+            {
+                "nombre_campo": "category_name",
+                "tipo_dato": "STRING",
+                "admite_nulos": "SI"
+            },
+            {
+                "nombre_campo": "category_description",
+                "tipo_dato": "STRING",
+                "admite_nulos": "SI"
+            },
+            {
+                "nombre_campo": "category_image_url",
+                "tipo_dato": "STRING",
+                "admite_nulos": "SI"
+            },
+            {
+                "nombre_campo": "category_created_at",
+                "tipo_dato": "DATETIME",
+                "admite_nulos": "SI"
+            },
+            {
+                "nombre_campo": "category_updated_at",
+                "tipo_dato": "DATETIME",
+                "admite_nulos": "SI"
+            }
+        ]
+    }
+}

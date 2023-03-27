@@ -1,0 +1,10 @@
+requests
+pandas
+google-cloud-bigquery
+google-cloud-bigquery-storage
+google-cloud-storage
+google-cloud-pubsub
+google-cloud-functions
+fastapi[all]
+uvicorn
+psycopg2-binary

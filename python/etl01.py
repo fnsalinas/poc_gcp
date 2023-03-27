@@ -7,6 +7,9 @@ import csv
 import subprocess
 from datetime import datetime
 
+# subprocess.run(['export', 'GOOGLE_APPLICATION_CREDENTIALS=/home/ubuntu/workspace/fsalinas/PRIVATE/gcp_sa/gcp_poc/poc-gcp-381517-646d17edc845.json'])
+# export GOOGLE_APPLICATION_CREDENTIALS=/home/ubuntu/workspace/fsalinas/PRIVATE/gcp_sa/gcp_poc/poc-gcp-381517-646d17edc845.json
+
 ### Inicio codigo para conectar con BigQuery
 
 from google.cloud import bigquery
