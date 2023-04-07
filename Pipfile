@@ -16,6 +16,7 @@ uvicorn = "*"
 ipykernel = "*"
 psycopg2-binary = "*"
 poc-gcp = {editable = true, path = "."}
+pydantic = "*"
 
 [dev-packages]
 autopep8 = "*"
