@@ -1,4 +1,4 @@
-<mxfile modified="2023-04-07T17:22:27.488Z" host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36" etag="hFeJ86Nne7RE8EKmiaKA" version="21.1.5" type="github">
+<mxfile modified="2023-04-07T17:24:39.513Z" host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36" etag="pydqqHnilQzMB1lts6IG" version="21.1.5" type="github">
   <diagram id="d1ab7348-05c3-a1e3-ca4d-12c340fd6b49" name="Page-1">
     <mxGraphModel dx="2810" dy="1415" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
       <root>
@@ -385,10 +385,10 @@
           <mxGeometry width="133.91" height="159" as="geometry" />
         </mxCell>
         <mxCell id="i_Fcsn6_QUgu9OQFPRpI-538" value="" style="whiteSpace=wrap;html=1;rounded=1;arcSize=6;shadow=1;glass=0;strokeColor=#CCCCCC;" vertex="1" parent="i_Fcsn6_QUgu9OQFPRpI-535">
-          <mxGeometry x="3.648486590038317" y="31.5" width="124" height="114" as="geometry" />
+          <mxGeometry x="3.65" y="31.5" width="124" height="118.5" as="geometry" />
         </mxCell>
         <mxCell id="i_Fcsn6_QUgu9OQFPRpI-546" value="" style="group;aspect=fixed;" vertex="1" connectable="0" parent="i_Fcsn6_QUgu9OQFPRpI-535">
-          <mxGeometry x="7.749999999999943" y="52" width="116" height="76.42" as="geometry" />
+          <mxGeometry x="7.749999999999943" y="39" width="116" height="76.42" as="geometry" />
         </mxCell>
         <mxCell id="i_Fcsn6_QUgu9OQFPRpI-426" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn3.iconfinder.com/data/icons/2018-social-media-logotypes/1000/2018_social_media_popular_app_logo_facebook-128.png" vertex="1" parent="i_Fcsn6_QUgu9OQFPRpI-546">
           <mxGeometry x="42.417910447761194" width="34.626865671641774" height="34.626865671641774" as="geometry" />
@@ -407,6 +407,9 @@
         </mxCell>
         <mxCell id="i_Fcsn6_QUgu9OQFPRpI-428" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn3.iconfinder.com/data/icons/2018-social-media-logotypes/1000/2018_social_media_popular_app_logo_instagram-128.png" vertex="1" parent="i_Fcsn6_QUgu9OQFPRpI-546">
           <mxGeometry x="81.37313432835818" width="34.626865671641774" height="34.626865671641774" as="geometry" />
+        </mxCell>
+        <mxCell id="i_Fcsn6_QUgu9OQFPRpI-633" value="" style="shape=image;imageAspect=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;image=https://static.thenounproject.com/png/730315-200.png;" vertex="1" parent="i_Fcsn6_QUgu9OQFPRpI-535">
+          <mxGeometry x="46.96" y="110.5" width="41" height="41" as="geometry" />
         </mxCell>
         <mxCell id="i_Fcsn6_QUgu9OQFPRpI-558" value="Batch or Streaming" style="rounded=1;absoluteArcSize=1;arcSize=2;html=1;strokeColor=#4284F3;gradientColor=none;shadow=0;dashed=1;fontSize=12;fontColor=#9E9E9E;align=left;verticalAlign=top;spacing=10;spacingTop=-4;fillColor=none;dashPattern=1 2;strokeWidth=2;" vertex="1" parent="1">
           <mxGeometry x="-410" y="660" width="170" height="230" as="geometry" />
